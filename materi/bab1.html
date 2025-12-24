@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Bab 1 — Pengenalan HTML</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span> </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">Tentang</a></li>
+          <li><a href="#" class="nav-link active">Materi</a></li>
+          <li><a href="../contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">Tentang</a>
+        <a href="#" class="nav-link active">Materi</a>
+        <a href="../contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <span class="badge">Bab 1</span>
+          <h2>Pengenalan HTML</h2>
+          <p class="hero-desc">
+            Pada bab ini kamu akan mempelajari dasar-dasar HTML sebagai struktur utama halaman website.
+          </p>
+        </div>
+      </section>
+
+      <!-- KONTEN BAB -->
+      <section class="lessons">
+        <div class="lesson-card">
+          <h3>📌 Sub-Bab Materi</h3>
+
+          <ul class="topic-list">
+            <li>Apa itu HTML?</li>
+            <li>Struktur Dasar HTML</li>
+            <li>Elemen & Tag</li>
+            <li>Heading, Paragraf & Teks</li>
+          </ul>
+        </div>
+
+        <div class="lesson-card">
+          <h3>📖 Teori Singkat</h3>
+          <p class="lesson-desc">
+            HTML (HyperText Markup Language) digunakan untuk menyusun struktur konten pada halaman web. HTML terdiri
+            dari elemen dan tag yang memberi arti pada teks dan media.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <h3>🧪 Contoh Kode</h3>
+
+          <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Halo Dunia&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Belajar HTML&lt;/h1&gt;
+    &lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+          <p class="lesson-desc">Struktur di atas adalah format dasar dokumen HTML.</p>
+        </div>
+
+        <div class="lesson-card">
+          <h3>🖼 Ilustrasi Pembelajaran</h3>
+          <p class="lesson-desc">
+            Bayangkan HTML seperti kerangka rumah. Ia membentuk struktur, namun belum memiliki warna atau dekorasi (yang
+            nanti diberikan oleh CSS).
+          </p>
+        </div>
+
+        <a href="bab2.html" class="btn primary full">Lanjut ke Bab 2 ➜</a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span> </span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">Tentang</a></li>
+              <li><a href="#" class="footer-links-active">Materi</a></li>
+              <li><a href="../contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2025 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

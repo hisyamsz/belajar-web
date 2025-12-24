@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>UAS Project</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span> </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">Tentang</a></li>
+          <li><a href="materi/" class="nav-link">Materi</a></li>
+          <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">Tentang</a>
+        <a href="materi/" class="nav-link">Materi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ================= HERO / TUJUAN ================= -->
+      <section class="about-hero">
+        <div class="about-hero-content">
+          <span class="badge">Tentang Website</span>
+          <h1>
+            Membangun Pemahaman <br />
+            <span class="gradient-text">Web Development untuk Pemula</span>
+          </h1>
+          <p class="hero-desc">
+            Website ini dibuat sebagai media pembelajaran interaktif untuk membantu mahasiswa dan pemula memahami
+            dasar-dasar HTML, CSS, dan JavaScript secara bertahap dan mudah dipahami.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= LATAR BELAKANG ================= -->
+      <section class="about-section">
+        <div class="about-grid">
+          <div>
+            <h2>Latar Belakang 📖</h2>
+            <p>
+              Website ini dikembangkan sebagai bagian dari tugas Ujian Akhir Semester mata kuliah
+              <strong>Pemrograman Web</strong>. Banyak pemula mengalami kesulitan dalam memahami konsep web development
+              karena materi yang terlalu kompleks dan kurang terstruktur.
+            </p>
+            <p>
+              Oleh karena itu, website ini dirancang dengan pendekatan sederhana, terstruktur per bab, serta dilengkapi
+              contoh kode dan interaksi JavaScript agar pembelajaran menjadi lebih efektif.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <h3>3</h3>
+              <p>Anggota Kelompok</p>
+            </div>
+            <div class="stat-card">
+              <h3>4+</h3>
+              <p>Bab Materi</p>
+            </div>
+            <div class="stat-card">
+              <h3>HTML</h3>
+              <p>CSS & JavaScript</p>
+            </div>
+            <div class="stat-card">
+              <h3>100%</h3>
+              <p>Statis</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= NILAI ================= -->
+      <section class="about-values">
+        <h2>Tujuan & Prinsip Website</h2>
+        <p class="section-desc">Website ini dikembangkan dengan beberapa prinsip utama dalam pembelajaran.</p>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="icon">❤️</div>
+            <h3>Mudah Dipahami</h3>
+            <p>Materi disusun dari dasar hingga lanjutan secara bertahap.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="icon">💡</div>
+            <h3>Terstruktur</h3>
+            <p>Materi dibagi ke dalam Bab dan Sub-bab sesuai silabus.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="icon">👥</div>
+            <h3>Edukatif</h3>
+            <p>Dirancang sebagai media pembelajaran untuk mahasiswa dan pemula.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SASARAN ================= -->
+      <section class="about-section">
+        <h2 class="center">Sasaran Pengguna</h2>
+
+        <div class="target-list">
+          <div class="target-item">• Mahasiswa Teknik Informatika</div>
+          <div class="target-item">• Pemula yang baru belajar web</div>
+          <div class="target-item">• Pelajar yang ingin memahami website</div>
+          <div class="target-item">• Siapa saja yang tertarik web development</div>
+        </div>
+      </section>
+
+      <!-- ================= PEMBUAT ================= -->
+      <section class="about-creator">
+        <h2>Profil Pembuat</h2>
+        <p class="section-desc">Website ini dibuat oleh mahasiswa sebagai tugas UAS Pemrograman Web.</p>
+
+        <div class="creator-card">
+          <p><strong>Kelompok 5</strong></p>
+          <ul>
+            <li>Hisyam Santoso</li>
+            <li>Kaka Ashadie</li>
+            <li>Moh Ariel</li>
+          </ul>
+          <p>Kelas: <strong>05TPLP015</strong></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span> </span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" class="footer-links-active">Tentang</a></li>
+              <li><a href="materi/">Materi</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2025 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

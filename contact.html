@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>UAS Project</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span> </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">Tentang</a></li>
+          <li><a href="materi/" class="nav-link">Materi</a></li>
+          <li><a href="contact.html" class="nav-link active">Kontak</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="materi/" class="nav-link">Materi</a>
+        <a href="contact.html" class="nav-link active">Kontak</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO KONTAK -->
+      <section class="hero">
+        <div class="hero-content">
+          <span class="badge">Hubungi Kami</span>
+          <h2>Halaman Kontak</h2>
+          <p class="hero-desc">
+            Silakan hubungi kami melalui formulir di bawah ini atau tonton video perkenalan anggota kelompok.
+          </p>
+        </div>
+      </section>
+
+      <!-- FORM & VIDEO -->
+      <section class="contact-section">
+        <div class="contact-grid">
+          <!-- FORM KONTAK -->
+          <div class="contact-card">
+            <h3>Formulir Kontak</h3>
+
+            <form id="contactForm">
+              <label for="name">Nama</label>
+              <input type="text" id="name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+
+              <label for="message">Pesan</label>
+              <textarea id="message" rows="4" required></textarea>
+
+              <button type="submit" class="btn primary big">Kirim Pesan</button>
+            </form>
+
+            <p id="successMessage" class="success-msg">✅ Pesan berhasil dikirim!</p>
+          </div>
+
+          <!-- VIDEO PERKENALAN -->
+          <div class="contact-card">
+            <h3>Video Perkenalan Kelompok</h3>
+            <p class="section-desc">
+              Video ini berisi perkenalan anggota kelompok serta pembagian tugas masing-masing mahasiswa.
+            </p>
+
+            <video controls>
+              <source src="video/perkenalan-kelompok.mp4" type="video/mp4" />
+              Browser Anda tidak mendukung video.
+            </video>
+
+            <ul class="anggota-list">
+              <li>Hisyam Santoso – Front End & Struktur HTML</li>
+              <li>Kaka Ashadie – CSS & Desain</li>
+              <li>Moh Ariel – JavaScript & Interaksi</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span> </span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Tentang</a></li>
+              <li><a href="materi/">Materi</a></li>
+              <li><a href="contact.html" class="footer-links-active">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2025 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

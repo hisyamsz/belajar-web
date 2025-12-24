@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>UAS Project</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span> </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">Tentang</a></li>
+          <li><a href="materi/" class="nav-link">Materi</a></li>
+          <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="materi/bab1.html" class="nav-link">Materi</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-content">
+          <span class="badge">Mulailah perjalanan coding Anda hari ini!</span>
+
+          <h2>
+            Belajar Web Development <br />
+            <span class="gradient-text">Dari Dasar Untuk Pemula</span>
+          </h2>
+
+          <p class="hero-desc">
+            Panduan ramah untuk menjadi web developer! Pelajari HTML, CSS, dan JavaScript dengan materi yang mudah
+            dipahami untuk pemula.
+          </p>
+
+          <div class="hero-actions">
+            <a href="materi/" class="btn primary"> Mulai Belajar → </a>
+            <a href="about.html" class="btn outline"> Pelajari Lebih Lanjut </a>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="tech-stack">
+            <p>Apa yang akan kamu pelajari</p>
+            <div class="tech-list">
+              <div class="tech-item html">HTML</div>
+              <div class="tech-item css">CSS</div>
+              <div class="tech-item js">JavaScript</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features">
+        <h2>Apa yang menarik di Sini?</h2>
+        <p class="section-desc">
+          Website ini dirancang agar belajar web development jadi mudah, menyenangkan, dan efektif.
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon">📘</div>
+            <h3>Mudah Dipahami</h3>
+            <p>Materi disusun langkah demi langkah untuk pemula.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">✨</div>
+            <h3>Interaktif</h3>
+            <p>Contoh kode dan tombol interaksi menggunakan JavaScript.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">⚡</div>
+            <h3>Belajar Cepat</h3>
+            <p>Fokus pada dasar penting agar cepat menguasai web.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">👥</div>
+            <h3>Terstruktur</h3>
+            <p>Materi dibagi per bab sesuai silabus Pemrograman Web 1.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <h2>Siap Memulai Belajar?</h2>
+        <p>Mulai perjalanan web development kamu sekarang juga. Pelajaran pertama sudah menunggu!</p>
+        <a href="materi/" class="btn primary big"> Lihat Materi → </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span> </span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html" class="footer-links-active">Home</a></li>
+              <li><a href="about.html">Tentang</a></li>
+              <li><a href="materi/bab1.html">Materi</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2025 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
