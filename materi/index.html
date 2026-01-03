@@ -1,22 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-
-    <title>UAS Project</title>
+    <title>Daftar Materi Pembelajaran</title>
   </head>
+
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="nav-container">
-        <!-- Logo -->
         <a href="../index.html" class="logo">
           <div class="logo-icon">;</div>
           <span class="logo-text"> Belajar<span>Web</span> </span>
         </a>
 
-        <!-- Desktop Menu -->
         <ul class="nav-menu">
           <li><a href="../index.html" class="nav-link">Home</a></li>
           <li><a href="../about.html" class="nav-link">Tentang</a></li>
@@ -24,11 +23,9 @@
           <li><a href="../contact.html" class="nav-link">Kontak</a></li>
         </ul>
 
-        <!-- Hamburger -->
         <button class="nav-toggle" onclick="toggleMenu()">☰</button>
       </div>
 
-      <!-- Mobile Menu -->
       <div id="mobileMenu" class="mobile-menu">
         <a href="../index.html" class="nav-link">Home</a>
         <a href="../about.html" class="nav-link">Tentang</a>
@@ -37,45 +34,49 @@
       </div>
     </nav>
 
-    <!-- ===== HERO MATERI ===== -->
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
         <span class="badge">Mulai Belajar</span>
         <h2 class="gradient-text">Daftar Materi Pembelajaran</h2>
-
         <p class="hero-desc">
-          Pilih materi pembelajaran sesuai urutan. Setiap BAB disusun agar mudah dipahami dan cocok untuk pemula.
+          Materi disusun berdasarkan urutan pembahasan pada makalah dari konsep web, HTML, CSS, JavaScript hingga
+          implementasi.
         </p>
       </div>
     </section>
 
-    <!-- ===== GRID MATERI ===== -->
+    <!-- GRID MATERI -->
     <section class="lessons">
       <div class="lessons-grid">
-        <!-- ================= CARD 1 ================= -->
+        <!-- BAB 1 -->
         <div class="lesson-card">
-          <h3>BAB 1 - Pengenalan Web</h3>
-          <p class="lesson-desc">Memahami apa itu website, browser, dan struktur dasar halaman web.</p>
+          <h3>BAB 1 Konsep Dasar Web & Internet</h3>
+          <p class="lesson-desc">
+            Membahas pengenalan web, cara kerja client–server, browser, dan struktur dasar halaman web.
+          </p>
 
           <div class="lesson-meta">
-            <span>Beginner</span>
+            <span>Basic Theory</span>
             <span>1 Jam</span>
           </div>
 
           <ul class="topic-list">
-            <li>Client & Server</li>
-            <li>Browser & Rendering</li>
+            <li>Konsep Internet & WWW</li>
+            <li>Client Server</li>
+            <li>Peran Browser</li>
             <li>Struktur Dokumen Web</li>
-            <li>Konsep Website</li>
           </ul>
 
-          <a href="bab1.html" class="btn outline full">Mulai Belajar →</a>
+          <a href="bab1.html" class="btn outline full">Buka Bab 1 →</a>
         </div>
 
-        <!-- ================= CARD 2 ================= -->
+        <!-- BAB 2 -->
         <div class="lesson-card">
-          <h3>BAB 2 - Dasar HTML</h3>
-          <p class="lesson-desc">Belajar elemen dasar HTML sebagai kerangka utama halaman web.</p>
+          <h3>BAB 2 Dasar HTML & Struktur Halaman</h3>
+          <p class="lesson-desc">
+            Membahas elemen, struktur dokumen HTML, heading, paragraf, gambar, link, tabel, dan list.
+          </p>
 
           <div class="lesson-meta">
             <span>Beginner</span>
@@ -83,19 +84,19 @@
           </div>
 
           <ul class="topic-list">
+            <li>Struktur Dokumen HTML</li>
             <li>Heading & Paragraf</li>
             <li>Link & Gambar</li>
-            <li>List</li>
-            <li>Tabel</li>
+            <li>List & Tabel</li>
           </ul>
 
-          <a href="bab2.html" class="btn outline full">Mulai Belajar →</a>
+          <a href="bab2.html" class="btn outline full">Buka Bab 2 →</a>
         </div>
 
-        <!-- ================= CARD 3 ================= -->
+        <!-- BAB 3 -->
         <div class="lesson-card">
-          <h3>BAB 3 - Dasar CSS</h3>
-          <p class="lesson-desc">Memberikan tampilan dan warna pada halaman agar lebih menarik.</p>
+          <h3>BAB 3 Dasar CSS & Pengaturan Tampilan</h3>
+          <p class="lesson-desc">Mempelajari selector, warna, font, box model, serta pengaturan layout dasar.</p>
 
           <div class="lesson-meta">
             <span>Beginner</span>
@@ -104,18 +105,18 @@
 
           <ul class="topic-list">
             <li>Selector & Properti</li>
-            <li>Warna & Font</li>
+            <li>Typography & Color</li>
             <li>Box Model</li>
             <li>Layout Dasar</li>
           </ul>
 
-          <a href="bab3.html" class="btn outline full">Mulai Belajar →</a>
+          <a href="bab3.html" class="btn outline full">Buka Bab 3 →</a>
         </div>
 
-        <!-- ================= CARD 4 ================= -->
+        <!-- BAB 4 -->
         <div class="lesson-card">
-          <h3>BAB 4 - Layout & Responsive</h3>
-          <p class="lesson-desc">Membuat website responsif agar nyaman di semua ukuran layar.</p>
+          <h3>BAB 4 Layout & Responsive Web Design</h3>
+          <p class="lesson-desc">Membahas Flexbox, Grid dasar, serta teknik responsive menggunakan media query.</p>
 
           <div class="lesson-meta">
             <span>Intermediate</span>
@@ -129,13 +130,13 @@
             <li>Mobile First</li>
           </ul>
 
-          <a href="bab4.html" class="btn outline full">Mulai Belajar →</a>
+          <a href="bab4.html" class="btn outline full">Buka Bab 4 →</a>
         </div>
 
-        <!-- ================= CARD 5 ================= -->
+        <!-- BAB 5 -->
         <div class="lesson-card">
-          <h3>BAB 5 - Formulir HTML</h3>
-          <p class="lesson-desc">Membuat form input data seperti nama, email, dan pesan.</p>
+          <h3>BAB 5 Formulir & Input Data</h3>
+          <p class="lesson-desc">Membuat form, input text, email, textarea, tombol submit, dan validasi dasar.</p>
 
           <div class="lesson-meta">
             <span>Beginner</span>
@@ -143,19 +144,19 @@
           </div>
 
           <ul class="topic-list">
+            <li>Elemen Form</li>
             <li>Input Type</li>
             <li>Textarea</li>
-            <li>Button Submit</li>
-            <li>Validasi Dasar</li>
+            <li>Validasi Sederhana</li>
           </ul>
 
-          <a href="bab5.html" class="btn outline full">Mulai Belajar →</a>
+          <a href="bab5.html" class="btn outline full">Buka Bab 5 →</a>
         </div>
 
-        <!-- ================= CARD 6 ================= -->
+        <!-- BAB 6 -->
         <div class="lesson-card">
-          <h3>BAB 6 - Dasar JavaScript</h3>
-          <p class="lesson-desc">Menambah interaksi pada website menggunakan JavaScript sederhana.</p>
+          <h3>BAB 6 Dasar JavaScript & Interaksi Halaman</h3>
+          <p class="lesson-desc">Menambahkan interaksi dengan variabel, fungsi, DOM, dan event klik.</p>
 
           <div class="lesson-meta">
             <span>Beginner</span>
@@ -166,43 +167,18 @@
             <li>Variabel</li>
             <li>Fungsi</li>
             <li>DOM</li>
-            <li>Event Klik</li>
+            <li>Event</li>
           </ul>
 
-          <a href="bab6.html" class="btn outline full">Mulai Belajar →</a>
+          <a href="bab6.html" class="btn outline full">Buka Bab 6 →</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer-container">
-        <div class="footer-grid">
-          <!-- Brand -->
-          <div class="footer-brand">
-            <a href="index.html" class="footer-logo">
-              <div class="footer-logo-icon">;</div>
-              <span class="footer-logo-text"> Belajar<span>Web</span> </span>
-            </a>
-
-            <p class="footer-desc">
-              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
-            </p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="footer-links">
-            <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../about.html">Tentang</a></li>
-              <li><a href="#" class="footer-links-active">Materi</a></li>
-              <li><a href="../contact.html">Kontak</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Bottom -->
         <div class="footer-bottom">
-          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2025 Belajar Web</p>
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2026 Belajar Web</p>
         </div>
       </div>
     </footer>

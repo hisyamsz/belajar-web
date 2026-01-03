@@ -125,6 +125,11 @@ body {
   animation: fadeIn 0.3s ease;
 }
 
+/* Saat aktif */
+.mobile-menu.show {
+  display: flex;
+}
+
 .mobile-menu a {
   padding: 12px;
 }
