@@ -3,7 +3,7 @@ Nama file      : script.js
 Tanggal ngoding: 22 Desember 2025
 Kelas          : 05TPLP015
 Kelompok       : 5
-Anggota        : Hisyam Santoso, Kaka Ashadie, Moh Ariel
+Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
 Deskripsi      : Interaksi show/hide kode dan validasi form
 */
 
@@ -49,4 +49,29 @@ document.querySelectorAll("#mobileMenu a").forEach((link) => {
     document.body.style.overflow = "";
     toggleBtn.textContent = "☰";
   });
+});
+
+// ===== Accordion Sub Bab =====
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const parent = header.parentElement;
+    parent.classList.toggle("open");
+
+    const icon = header.querySelector(".accordion-icon");
+    icon.textContent = parent.classList.contains("open") ? "−" : "+";
+  });
+});
+
+// ===== Show / Hide Code Blocks =====
+document.querySelectorAll(".toggle-code-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const codeBox = btn.nextElementSibling;
+    codeBox.style.display = codeBox.style.display === "block" ? "none" : "block";
+
+    btn.textContent = codeBox.style.display === "block" ? "Sembunyikan Kode" : "Tampilkan Kode";
+  });
+});
+
+document.querySelectorAll(".code-html").forEach((block) => {
+  block.textContent = block.innerHTML;
 });

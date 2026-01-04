@@ -1,23 +1,22 @@
 <!doctype html>
 <html lang="id">
   <!--
-  Nama file      : bab2.html
+  Nama file      : bab3.html
   Tanggal ngoding: 22 Desember 2025
   Kelas          : 05TPLP015
   Kelompok       : 5
   Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
-  Deskripsi      : Halaman Materi Bab 2 berisi pembahasan struktur HTML5
-                    yang mencakup elemen, atribut, heading, paragraf,
-                    hyperlink, gambar, list, tabel, dan elemen semantik.
-                    Disajikan dalam bentuk accordion serta tombol
-                    show/hide kode menggunakan JavaScript.
+  Deskripsi      : Halaman Materi Bab 3 berisi pengenalan dasar CSS
+                    meliputi fungsi CSS, selector, properti, warna, margin,
+                    padding, dan penggunaan kelas serta id. Dilengkapi
+                    accordion dan tombol show/hide kode.
   -->
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Bab 2 Struktur Dasar HTML5</title>
+    <title>Bab 3 Pengenalan CSS Dasar</title>
   </head>
 
   <body>
@@ -51,153 +50,141 @@
       <!-- HERO PEMBUKA -->
       <article class="hero">
         <div class="hero-content">
-          <span class="badge">Bab 2</span>
-          <h2>Struktur Dasar HTML5</h2>
+          <span class="badge">Bab 3</span>
+          <h2>Pengenalan CSS Dasar</h2>
 
           <p class="hero-desc">
-            Pada bab ini kamu akan mempelajari struktur dasar dokumen HTML5, elemen dan atribut, penggunaan heading dan
-            paragraf, serta elemen konten seperti hyperlink, gambar, list, tabel, dan elemen semantik.
+            Pada bab ini kamu akan mempelajari dasar-dasar CSS, fungsi CSS dalam mengatur tampilan website, penggunaan
+            selector, properti gaya, serta cara mengatur warna, teks, jarak, dan layout elemen.
           </p>
         </div>
       </article>
 
       <!-- ====== AKORDION SUB BAB ====== -->
       <section class="lessons">
-        <!-- ================= SUB BAB 2.1 ================= -->
+        <!-- ================= SUB BAB 3.1 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.1 Tag, Elemen, dan Atribut HTML
+            3.1 Apa itu CSS dan Fungsinya?
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML tersusun dari elemen-elemen yang ditulis menggunakan tag. Setiap elemen dapat memiliki atribut untuk
-              memberikan informasi tambahan pada suatu tag.
+              CSS digunakan untuk mengatur tampilan dan desain halaman web. Dengan CSS, elemen HTML dapat diberi warna,
+              ukuran, tata letak, dan gaya visual agar website lebih rapi dan menarik.
             </p>
 
             <ul class="topic-list">
-              <li>Tag berfungsi sebagai penanda struktur dokumen</li>
-              <li>Elemen terdiri dari tag pembuka, isi, dan tag penutup</li>
-              <li>Atribut digunakan untuk menambahkan properti pada elemen</li>
+              <li>CSS memisahkan konten (HTML) dan tampilan (style)</li>
+              <li>Memudahkan pengelolaan desain halaman web</li>
+              <li>Satu file CSS dapat digunakan pada banyak halaman</li>
             </ul>
           </div>
         </div>
 
-        <!-- ================= SUB BAB 2.2 ================= -->
+        <!-- ================= SUB BAB 3.2 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.2 Struktur Utama Dokumen HTML5
+            3.2 Cara Menghubungkan CSS ke HTML
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Dokumen HTML memiliki struktur utama yang terdiri dari DOCTYPE, elemen html, bagian head untuk metadata,
-              dan body sebagai tempat menampilkan konten halaman.
+              CSS dapat ditulis menggunakan tiga metode, yaitu inline style, internal style di dalam tag head, dan
+              external stylesheet menggunakan file terpisah.
             </p>
 
             <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
 
             <pre class="code-box">
 <code>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="id"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Struktur HTML5&lt;/title&gt;
-  &lt;/head&gt;
+/* External CSS */
+&lt;link rel="stylesheet" href="style.css"&gt;
 
-  &lt;body&gt;
-    Konten halaman ditulis pada bagian body.
-  &lt;/body&gt;
-&lt;/html&gt;
+/* Internal CSS */
+&lt;style&gt;
+  h1 { color: blue; }
+&lt;/style&gt;
+
+/* Inline CSS */
+&lt;p style="color:red;"&gt;Teks berwarna merah&lt;/p&gt;
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= SUB BAB 2.3 ================= -->
+        <!-- ================= SUB BAB 3.3 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.3 Heading dan Paragraf
+            3.3 Selector, Class, dan ID
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Heading digunakan sebagai judul dan subjudul yang memiliki tingkat hierarki, sedangkan paragraf digunakan
-              untuk menuliskan isi teks.
+              Selector digunakan untuk memilih elemen yang akan diberikan style. Class digunakan untuk banyak elemen,
+              sedangkan ID hanya untuk satu elemen khusus.
             </p>
 
             <ul class="topic-list">
-              <li>Heading terdiri dari h1 sampai h6</li>
-              <li>h1 digunakan sebagai judul utama halaman</li>
-              <li>Paragraf ditulis menggunakan elemen &lt;p&gt;</li>
+              <li>Tag selector : memilih berdasarkan nama elemen</li>
+              <li>Class selector : menggunakan tanda titik (.)</li>
+              <li>ID selector : menggunakan tanda pagar (#)</li>
             </ul>
 
             <button class="btn outline small toggle-code-btn">Show / Hide Code</button>
 
             <pre class="code-box">
 <code>
-&lt;h1&gt;Judul Utama&lt;/h1&gt;
-&lt;h2&gt;Subjudul Materi&lt;/h2&gt;
+h1 { color: green; }
 
-&lt;p&gt;Ini adalah contoh paragraf pada dokumen HTML.&lt;/p&gt;
+.container { padding: 20px; }
+
+#judul-utama { font-weight: bold; }
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= SUB BAB 2.4 ================= -->
+        <!-- ================= SUB BAB 3.4 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.4 Hyperlink, Gambar, List, dan Tabel
+            3.4 Properti Warna, Margin, dan Padding
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML menyediakan berbagai elemen untuk menampilkan konten seperti tautan, gambar, daftar, serta tabel
-              sebagai penyaji data terstruktur.
+              CSS menyediakan properti untuk mengatur warna, jarak di luar elemen (margin), serta jarak di dalam elemen
+              (padding) agar tampilan lebih terstruktur dan nyaman dilihat.
             </p>
 
             <ul class="topic-list">
-              <li>&lt;a&gt; digunakan untuk membuat hyperlink</li>
-              <li>&lt;img&gt; digunakan untuk menampilkan gambar</li>
-              <li>&lt;ul&gt; dan &lt;ol&gt; digunakan untuk membuat daftar</li>
-              <li>&lt;table&gt; digunakan untuk menampilkan data dalam baris & kolom</li>
+              <li>color = mengatur warna teks</li>
+              <li>background-color = memberi warna latar</li>
+              <li>margin = jarak luar elemen</li>
+              <li>padding = jarak dalam elemen</li>
             </ul>
 
             <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
 
             <pre class="code-box">
 <code>
-&lt;a href="https://example.com"&gt;Kunjungi Website&lt;/a&gt;
-
-&lt;img src="gambar.png" alt="Contoh Gambar"&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Nama&lt;/th&gt;
-    &lt;th&gt;Kelas&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Hisyam&lt;/td&gt;
-    &lt;td&gt;05TPLP015&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+.box {
+  color: white;
+  background-color: #0d6efd;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
 </code>
             </pre>
           </div>
         </div>
 
-        <a href="bab3.html" class="btn primary full">Lanjut ke Bab 3 ➜</a>
+        <a href="bab4.html" class="btn primary full">Lanjut ke Bab 4 ➜</a>
       </section>
     </main>
 
