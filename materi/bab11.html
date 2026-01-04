@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="id">
+  <!--
+  Nama file      : bab11.html
+  Tanggal ngoding: 22 Desember 2025
+  Kelas          : 05TPLP015
+  Kelompok       : 5
+  Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
+  Deskripsi      : Halaman Materi Bab 11 membahas pembuatan website statis
+                    sederhana yang meliputi struktur HTML + CSS dasar,
+                    penambahan header, navigasi, hero, project section,
+                    serta styling layout menggunakan Flexbox dan Grid.
+  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Bab 11 Membuat Website Statis Sederhana</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">Tentang</a></li>
+          <li><a href="#" class="nav-link active">Materi</a></li>
+          <li><a href="../contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">Tentang</a>
+        <a href="#" class="nav-link active">Materi</a>
+        <a href="../contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main class="bab-materi">
+      <!-- HERO -->
+      <article class="hero">
+        <div class="hero-content">
+          <span class="badge">Bab 11</span>
+          <h2>Membuat Website Statis Sederhana</h2>
+
+          <p class="hero-desc">
+            Pada bab ini kamu akan mempraktikkan pembuatan website statis sederhana menggunakan HTML5 dan CSS3 mulai
+            dari struktur dasar halaman, header dan navigasi, hero section, project section, hingga styling layout
+            menggunakan Flexbox dan Grid.
+          </p>
+        </div>
+      </article>
+
+      <section class="lessons">
+        <!-- ================= SUB BAB 11.1 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            11.1 Struktur HTML + CSS Dasar
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Tahap awal pembuatan website dimulai dengan menyiapkan kerangka dasar file HTML dan file CSS. Pada contoh
+              berikut digunakan Google Fonts serta CSS Variables untuk mendefinisikan warna dan font utama.
+            </p>
+
+            <h4>Kode HTML</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode HTML</button>
+
+            <pre class="code-box">
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;id&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Portofolio Profesional | Kelompok 5&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/style.css&quot; /&gt;
+
+    &lt;link
+      href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap&quot;
+      rel=&quot;stylesheet&quot;
+    /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+            </pre>
+
+            <h4>Kode CSS</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode CSS</button>
+
+            <pre class="code-box">
+<code>
+/* 1. CSS Variables: Menyimpan nilai warna dan font */
+:root {
+  --primary-color: #2563eb;   /* Biru Utama */
+  --secondary-color: #1e293b; /* Biru Gelap */
+  --light-bg: #f8fafc;        /* Abu-abu muda */
+  --white: #ffffff;
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--secondary-color);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= SUB BAB 11.2 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            11.2 Menambahkan Navigasi dan Konten
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Setelah struktur dasar terbentuk, langkah berikutnya adalah menambahkan header, navigasi, hero section
+              sebagai tampilan utama, serta project section sebagai daftar karya yang ditampilkan.
+            </p>
+
+            <h4>A. Header dan Navigasi</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Header</button>
+
+            <pre class="code-box">
+<code>
+&lt;header class=&quot;main-header&quot;&gt;
+  &lt;div class=&quot;container header-wrapper&quot;&gt;
+
+    &lt;div class=&quot;logo&quot;&gt;Kelompok 5&lt;/div&gt;
+
+    &lt;nav class=&quot;navbar&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Beranda&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#projects&quot;&gt;Projek&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class=&quot;btn-theme&quot;&gt;&lt;/button&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+  &lt;/div&gt;
+&lt;/header&gt;
+</code>
+            </pre>
+
+            <h4>B. Hero Section</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Hero Section</button>
+
+            <pre class="code-box">
+<code>
+&lt;main&gt;
+  &lt;section id=&quot;home&quot; class=&quot;hero-section&quot;&gt;
+    &lt;div class=&quot;container hero-wrapper&quot;&gt;
+
+      &lt;div class=&quot;hero-text&quot;&gt;
+        &lt;h1&gt;
+          Halo, Kami
+          &lt;span class=&quot;text-highlight&quot;&gt;Kelompok 5&lt;/span&gt;
+        &lt;/h1&gt;
+
+        &lt;h2&gt;Web Developer &amp; UI Designer&lt;/h2&gt;
+
+        &lt;p&gt;
+          Membangun website responsif untuk bisnis Anda.
+        &lt;/p&gt;
+
+        &lt;div class=&quot;hero-buttons&quot;&gt;
+          &lt;a href=&quot;#projects&quot; class=&quot;btn btn-primary&quot;&gt;
+            Lihat Karya
+          &lt;/a&gt;
+
+          &lt;a href=&quot;#contact&quot; class=&quot;btn btn-outline&quot;&gt;
+            Unduh CV
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;hero-image&quot;&gt;
+        &lt;img
+          src=&quot;https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&amp;w=400&amp;q=80&quot;
+          alt=&quot;Foto Profil&quot;
+        /&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+</code>
+            </pre>
+
+            <h4>C. Project Section</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Project Section</button>
+
+            <pre class="code-box">
+<code>
+&lt;section id=&quot;projects&quot; class=&quot;projects-section&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+
+    &lt;h2 class=&quot;section-title&quot;&gt;Projek Terbaru&lt;/h2&gt;
+
+    &lt;div class=&quot;project-grid&quot;&gt;
+
+      &lt;article class=&quot;project-card&quot;&gt;
+        &lt;div class=&quot;card-image&quot; style=&quot;background-color:#cbd5e1;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;card-info&quot;&gt;
+          &lt;h3&gt;Website E-Commerce&lt;/h3&gt;
+          &lt;p&gt;Platform toko online dengan fitur keranjang belanja.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/article&gt;
+
+      &lt;article class=&quot;project-card&quot;&gt;
+        &lt;div class=&quot;card-image&quot; style=&quot;background-color:#94a3b8;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;card-info&quot;&gt;
+          &lt;h3&gt;Company Profile&lt;/h3&gt;
+          &lt;p&gt;Website profil perusahaan responsif.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/article&gt;
+
+      &lt;article class=&quot;project-card&quot;&gt;
+        &lt;div class=&quot;card-image&quot; style=&quot;background-color:#64748b;&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;card-info&quot;&gt;
+          &lt;h3&gt;Landing Page&lt;/h3&gt;
+          &lt;p&gt;Halaman promosi produk digital.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/article&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;/main&gt;
+</code>
+            </pre>
+
+            <h4>D. Footer</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Footer</button>
+
+            <pre class="code-box">
+<code>
+&lt;footer class=&quot;main-footer&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p&gt;&amp;copy; 2025 Kelompok 5. Dibuat dengan HTML5 &amp; CSS3.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= SUB BAB 11.3 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            11.3 Styling dengan Flexbox / Grid
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <!-- A -->
+            <h4>A. Styling Header (Flexbox)</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Header</button>
+
+            <pre class="code-box">
+<code>
+.main-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+</code>
+            </pre>
+
+            <!-- B -->
+            <h4>B. Styling Hero Section</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Hero Section</button>
+
+            <pre class="code-box">
+<code>
+.hero-section {
+  padding: 80px 0;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+</code>
+            </pre>
+
+            <!-- C -->
+            <h4>C. Styling Project Section (Grid)</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Project Grid</button>
+
+            <pre class="code-box">
+<code>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+}
+</code>
+            </pre>
+
+            <!-- D -->
+            <h4>D. Media Query</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Media Query</button>
+
+            <pre class="code-box">
+<code>
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <a href="bab12.html" class="btn primary full">Lanjut ke Bab 12 ➜</a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span></span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Tentang</a></li>
+              <li><a href="materi/" class="footer-links-active">Materi</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2026 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

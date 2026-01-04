@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="id">
+  <!--
+  Nama file      : bab6.html
+  Tanggal ngoding: 22 Desember 2025
+  Kelas          : 05TPLP015
+  Kelompok       : 5
+  Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
+  Deskripsi      : Halaman Materi Bab 6 membahas CSS Flexbox dan Grid
+                    meliputi konsep dasar flex container & flex item,
+                    penyusunan layout responsif menggunakan CSS Grid,
+                    serta studi kasus pembuatan layout landing page sederhana.
+  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Bab 6 CSS Flexbox dan Grid</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">Tentang</a></li>
+          <li><a href="#" class="nav-link active">Materi</a></li>
+          <li><a href="../contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">Tentang</a>
+        <a href="#" class="nav-link active">Materi</a>
+        <a href="../contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main class="bab-materi">
+      <!-- HERO -->
+      <article class="hero">
+        <div class="hero-content">
+          <span class="badge">Bab 6</span>
+          <h2>CSS Flexbox dan Grid</h2>
+
+          <p class="hero-desc">
+            Pada bab ini kamu akan mempelajari penyusunan layout modern menggunakan CSS Flexbox dan CSS Grid untuk
+            membuat tampilan web yang responsif, terstruktur, dan mudah diatur.
+          </p>
+        </div>
+      </article>
+
+      <section class="lessons">
+        <!-- ================= SUB BAB 6.1 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            6.1 Konsep Flexbox dan Penerapannya
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Flexbox digunakan untuk mengatur tata letak elemen secara fleksibel dalam satu baris atau kolom. Flexbox
+              memudahkan penyusunan layout yang dinamis dan responsif.
+            </p>
+
+            <ul class="topic-list">
+              <li>flex-direction ➜ mengatur arah baris / kolom</li>
+              <li>justify-content ➜ perataan secara horizontal</li>
+              <li>align-items ➜ perataan secara vertikal</li>
+              <li>gap ➜ jarak antar elemen</li>
+            </ul>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
+
+            <pre class="code-box">
+<code>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= SUB BAB 6.2 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            6.2 Membuat Layout Responsif dengan Grid
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              CSS Grid digunakan untuk membuat layout berbasis kolom dan baris. Grid sangat cocok untuk membangun
+              struktur halaman yang kompleks namun tetap rapi dan responsif.
+            </p>
+
+            <ul class="topic-list">
+              <li>grid-template-columns ➜ jumlah & ukuran kolom</li>
+              <li>grid-template-rows ➜ jumlah & ukuran baris</li>
+              <li>gap ➜ jarak antar grid item</li>
+              <li>responsive layout menggunakan fr unit</li>
+            </ul>
+
+            <button class="btn outline small toggle-code-btn">Show / Hide Code</button>
+
+            <pre class="code-box">
+<code>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= SUB BAB 6.3 ================= -->
+        <!-- ================= SUB BAB 6.3 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            6.3 Studi Kasus: Layout Landing Page Sederhana
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Pada studi kasus ini kamu akan melihat penerapan Flexbox pada header dan hero section, serta penggunaan
+              CSS Grid untuk menampilkan galeri project dalam layout landing page sederhana.
+            </p>
+
+            <h4>Struktur HTML Layout</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode HTML</button>
+
+            <pre class="code-box">
+<code>
+&lt;div class="container-utama"&gt;
+
+  &lt;header class="main-header"&gt;
+    &lt;div class="logo"&gt;MyPortfolio&lt;/div&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Home&lt;/a&gt;
+      &lt;a href="#"&gt;About&lt;/a&gt;
+      &lt;a href="#"&gt;Projects&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;section class="hero"&gt;
+    &lt;div class="hero-text"&gt;
+      &lt;h1&gt;Selamat Datang di Dunia Web&lt;/h1&gt;
+      &lt;p&gt;Saya membangun website modern dengan teknologi terkini.&lt;/p&gt;
+      &lt;button&gt;Lihat Projek&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="hero-image"&gt;
+      &lt;div class="kotak-gambar"&gt;Gambar Ilustrasi&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="projects"&gt;
+    &lt;h2&gt;Projek Terbaru&lt;/h2&gt;
+
+    &lt;div class="grid-gallery"&gt;
+      &lt;div class="card"&gt;Projek 1&lt;/div&gt;
+      &lt;div class="card"&gt;Projek 2&lt;/div&gt;
+      &lt;div class="card"&gt;Projek 3&lt;/div&gt;
+      &lt;div class="card"&gt;Projek 4&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+&lt;/div&gt;
+</code>
+            </pre>
+
+            <h4>CSS Flexbox & Grid</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode CSS</button>
+
+            <pre class="code-box">
+<code>
+/* Reset CSS Dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* 1. Implementasi Flexbox pada Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.main-header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* 2. Implementasi Flexbox pada Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 100px 50px;
+  background-color: #ecf0f1;
+  min-height: 60vh;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.kotak-gambar {
+  width: 100%;
+  height: 300px;
+  background-color: #bdc3c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* 3. Implementasi Grid pada Galeri */
+.projects {
+  padding: 50px;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <a href="bab7.html" class="btn primary full">Lanjut ke Bab 7 ➜</a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span></span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Tentang</a></li>
+              <li><a href="materi/" class="footer-links-active">Materi</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2026 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

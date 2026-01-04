@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="id">
   <!--
-  Nama file      : bab2.html
+  Nama file      : bab4.html
   Tanggal ngoding: 22 Desember 2025
   Kelas          : 05TPLP015
   Kelompok       : 5
   Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
-  Deskripsi      : Halaman Materi Bab 2 membahas struktur dasar HTML5
-                    yang meliputi elemen, tag, dan atribut, penggunaan
-                    heading, paragraf, hyperlink, gambar, list, table,
-                    serta dasar pembuatan formulir dan input.
-                    Disajikan dalam bentuk accordion dan tombol
-                    show/hide kode menggunakan JavaScript.
+  Deskripsi      : Halaman Materi Bab 4 membahas pengenalan CSS3 yang
+                    meliputi metode penulisan CSS (inline, internal, external),
+                    konsep selektor, properti, dan nilai, serta pengaturan warna,
+                    font, dan gaya teks pada elemen halaman web.
   -->
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Bab 2 Struktur Dasar HTML5</title>
+    <title>Bab 4 Pengenalan CSS3</title>
   </head>
 
   <body>
@@ -52,142 +50,131 @@
       <!-- HERO PEMBUKA -->
       <article class="hero">
         <div class="hero-content">
-          <span class="badge">Bab 2</span>
-          <h2>Struktur Dasar HTML5</h2>
+          <span class="badge">Bab 4</span>
+          <h2>Pengenalan CSS3</h2>
 
           <p class="hero-desc">
-            Pada bab ini kamu akan mempelajari penyusunan struktur halaman menggunakan elemen HTML, cara penggunaan tag
-            dan atribut, penulisan heading, paragraf, link, gambar, list, table, serta dasar pembuatan formulir dan
-            input pada halaman web.
+            Pada bab ini kamu akan mempelajari dasar penggunaan CSS3 untuk mengatur tampilan halaman web, mulai dari
+            cara menulis CSS, penggunaan selektor dan properti, hingga pengaturan warna, font, dan gaya teks.
           </p>
         </div>
       </article>
 
       <!-- ====== AKORDION SUB BAB ====== -->
       <section class="lessons">
-        <!-- ================= 2.1 ================= -->
+        <!-- ================= SUB BAB 4.1 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.1 Elemen, Tag, dan Atribut
+            4.1 Inline, Internal, dan External CSS
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML dibangun dari elemen-elemen yang ditulis menggunakan tag. Sebagian elemen memiliki atribut yang
-              berfungsi memberikan informasi tambahan pada suatu tag.
+              CSS dapat diterapkan dengan tiga metode penulisan, yaitu inline langsung pada elemen HTML, internal di
+              dalam tag &lt;style&gt;, serta external melalui file CSS terpisah.
             </p>
 
             <ul class="topic-list">
-              <li>Tag ➜ penanda awal dan akhir elemen</li>
-              <li>Elemen ➜ terdiri dari tag pembuka, isi, dan tag penutup</li>
-              <li>Atribut ➜ menambahkan properti pada elemen</li>
+              <li>Inline CSS ➜ ditulis di atribut style</li>
+              <li>Internal CSS ➜ ditulis di dalam &lt;head&gt;</li>
+              <li>External CSS ➜ file .css terpisah</li>
             </ul>
 
             <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
 
             <pre class="code-box">
 <code>
-&lt;p title="deskripsi paragraf"&gt;
-  Ini adalah elemen paragraf dengan atribut.
-&lt;/p&gt;
+<!-- Inline -->
+&lt;p style="color:red;"&gt;Contoh teks merah&lt;/p&gt;
+
+<!-- Internal -->
+&lt;style&gt;
+  h1 { color: blue; }
+&lt;/style&gt;
+
+<!-- External -->
+&lt;link rel="stylesheet" href="style.css"&gt;
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= 2.2 ================= -->
+        <!-- ================= SUB BAB 4.2 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.2 Heading, Paragraf, Link, Gambar, List, Table
+            4.2 Selektor, Properti, dan Nilai
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML menyediakan berbagai elemen untuk menampilkan teks, tautan, gambar, daftar, dan tabel sebagai
-              penyusun konten halaman.
+              Setiap deklarasi CSS terdiri dari selektor, properti, dan nilai. Selektor menentukan elemen yang akan
+              diberi style, sedangkan properti dan nilai menentukan aturan tampilannya.
             </p>
 
             <ul class="topic-list">
-              <li>Heading h1–h6 ➜ judul & subjudul</li>
-              <li>Paragraf ➜ elemen &lt;p&gt;</li>
-              <li>Hyperlink ➜ elemen &lt;a&gt;</li>
-              <li>Gambar ➜ elemen &lt;img&gt;</li>
-              <li>List ➜ &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
-              <li>Table ➜ &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</li>
+              <li>Selector ➜ elemen yang dipilih</li>
+              <li>Property ➜ aturan yang diatur</li>
+              <li>Value ➜ nilai dari properti</li>
             </ul>
 
-            <button class="btn outline small toggle-code-btn">Show / Hide Contoh Kode</button>
+            <button class="btn outline small toggle-code-btn">Show / Hide Code</button>
 
             <pre class="code-box">
 <code>
-&lt;h1&gt;Judul Halaman&lt;/h1&gt;
-&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+h1 {
+  color: green;     /* property */
+  font-size: 24px;  /* value */
+}
 
-&lt;a href="https://example.com"&gt;Kunjungi Website&lt;/a&gt;
-
-&lt;img src="foto.png" alt="Contoh Gambar"&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Nama&lt;/th&gt;
-    &lt;th&gt;Kelas&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Hisyam&lt;/td&gt;
-    &lt;td&gt;05TPLP015&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+.card {
+  padding: 10px;
+  border-radius: 8px;
+}
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= 2.3 ================= -->
+        <!-- ================= SUB BAB 4.3 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.3 Formulir dan Input
+            4.3 Warna, Font, dan Text Styling
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Formulir digunakan untuk menerima data dari pengguna melalui elemen input seperti text field, email,
-              password, dan tombol submit.
+              CSS menyediakan berbagai properti untuk mengatur warna, jenis huruf, ukuran teks, jarak baris, dan gaya
+              tulisan agar tampilan teks lebih rapi dan mudah dibaca.
             </p>
 
             <ul class="topic-list">
-              <li>&lt;form&gt; ➜ membungkus input pengguna</li>
-              <li>&lt;input&gt; ➜ text, email, password, number</li>
-              <li>&lt;label&gt; ➜ penanda nama field</li>
-              <li>&lt;button&gt; ➜ mengirim data</li>
+              <li>color ➜ warna teks</li>
+              <li>font-family ➜ jenis huruf</li>
+              <li>font-size ➜ ukuran teks</li>
+              <li>font-weight ➜ ketebalan teks</li>
+              <li>text-align ➜ perataan teks</li>
             </ul>
 
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Form</button>
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Styling</button>
 
             <pre class="code-box">
 <code>
-&lt;form&gt;
-  &lt;label&gt;Nama&lt;/label&gt;
-  &lt;input type="text" placeholder="Masukkan nama"&gt;
-
-  &lt;label&gt;Email&lt;/label&gt;
-  &lt;input type="email" placeholder="Masukkan email"&gt;
-
-  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
-&lt;/form&gt;
+.title {
+  color: #0d6efd;
+  font-family: "Segoe UI", Arial;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
 </code>
             </pre>
           </div>
         </div>
 
-        <a href="bab3.html" class="btn primary full">Lanjut ke Bab 3 ➜</a>
+        <a href="bab5.html" class="btn primary full">Lanjut ke Bab 5 ➜</a>
       </section>
     </main>
 

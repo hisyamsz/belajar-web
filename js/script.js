@@ -12,18 +12,28 @@ function toggleCode(id) {
   el.style.display = el.style.display === "block" ? "none" : "block";
 }
 
-function validateForm() {
-  if (
-    document.getElementById("nama").value === "" ||
-    document.getElementById("email").value === "" ||
-    document.getElementById("pesan").value === ""
-  ) {
+// ===== Validasi Form Kontak =====
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // cegah reload halaman
+
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+  const successMsg = document.getElementById("successMessage");
+
+  if (name.value.trim() === "" || email.value.trim() === "" || message.value.trim() === "") {
     alert("Semua field wajib diisi!");
-    return false;
+    return;
   }
-  alert("Pesan berhasil dikirim!");
-  return true;
-}
+
+  // Tampilkan pesan sukses
+  successMsg.style.display = "block";
+
+  // Reset form
+  name.value = "";
+  email.value = "";
+  message.value = "";
+});
 
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");

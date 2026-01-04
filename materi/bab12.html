@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="id">
+  <!--
+  Nama file      : bab12.html
+  Kelas          : 05TPLP015
+  Kelompok       : 5
+  Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
+  Deskripsi      : Bab 12 Menambahkan Interaktivitas dengan JavaScript
+  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Bab 12 Menambahkan Interaktivitas dengan JavaScript</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">Tentang</a></li>
+          <li><a href="#" class="nav-link active">Materi</a></li>
+          <li><a href="../contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">Tentang</a>
+        <a href="#" class="nav-link active">Materi</a>
+        <a href="../contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main class="bab-materi">
+      <!-- HERO -->
+      <article class="hero">
+        <div class="hero-content">
+          <span class="badge">Bab 12</span>
+          <h2>Menambahkan Interaktivitas dengan JavaScript</h2>
+
+          <p class="hero-desc">
+            Pada bab ini kamu akan mempelajari bagaimana JavaScript digunakan untuk menambahkan interaktivitas pada
+            halaman web seperti validasi form, tombol interaktif, serta pembuatan gallery / slider sederhana.
+          </p>
+        </div>
+      </article>
+
+      <section class="lessons">
+        <!-- ================= 12.1 VALIDASI FORM ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            12.1 Validasi Form Sederhana
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Validasi form memastikan data yang dikirim sesuai aturan, misalnya input tidak boleh kosong atau email
+              harus berformat benar.
+            </p>
+
+            <h4>Contoh Form</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Form</button>
+
+            <pre class="code-box"><code>
+&lt;form id=&quot;contactForm&quot;&gt;
+  &lt;label&gt;Nama&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;nama&quot; /&gt;
+
+  &lt;label&gt;Email&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email&quot; /&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;p id=&quot;notif&quot;&gt;&lt;/p&gt;
+</code></pre>
+
+            <h4>Script Validasi</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode JavaScript</button>
+
+            <pre class="code-box"><code>
+const form = document.getElementById(&quot;contactForm&quot;);
+const notif = document.getElementById(&quot;notif&quot;);
+
+form.addEventListener(&quot;submit&quot;, function(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById(&quot;nama&quot;).value;
+  const email = document.getElementById(&quot;email&quot;).value;
+
+  if(nama === &quot;&quot; || email === &quot;&quot;) {
+    notif.textContent = &quot;Form tidak boleh kosong&quot;;
+    notif.style.color = &quot;red&quot;;
+  } else {
+    notif.textContent = &quot;Data berhasil dikirim&quot;;
+    notif.style.color = &quot;green&quot;;
+  }
+});
+</code></pre>
+          </div>
+        </div>
+
+        <!-- ================= 12.2 TOMBOL INTERAKTIF ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            12.2 Membuat Tombol Interaktif
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Tombol interaktif dapat digunakan untuk mengubah tampilan elemen, menampilkan pesan, atau memanipulasi
+              konten halaman.
+            </p>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
+
+            <pre class="code-box"><code>
+&lt;h3 id=&quot;textJudul&quot;&gt;
+  Belajar JavaScript itu Menyenangkan
+&lt;/h3&gt;
+
+&lt;button onclick=&quot;ubahWarna()&quot;&gt;
+  Ubah Warna Teks
+&lt;/button&gt;
+
+&lt;script&gt;
+function ubahWarna() {
+  const judul = document.getElementById(&quot;textJudul&quot;);
+  judul.style.color = &quot;blue&quot;;
+}
+&lt;/script&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <!-- ================= 12.3 GALLERY / SLIDER ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            12.3 Membuat Gallery / Slider Sederhana
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Gallery atau slider digunakan untuk menampilkan beberapa gambar secara bergantian menggunakan JavaScript.
+            </p>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Slider</button>
+
+            <pre class="code-box"><code>
+&lt;img id=&quot;slide&quot; width=&quot;320&quot; /&gt;
+
+&lt;button onclick=&quot;prev()&quot;&gt;Prev&lt;/button&gt;
+&lt;button onclick=&quot;next()&quot;&gt;Next&lt;/button&gt;
+
+&lt;script&gt;
+const gambar = [
+  &quot;img/slider1.jpg&quot;,
+  &quot;img/slider2.jpg&quot;,
+  &quot;img/slider3.jpg&quot;
+];
+
+let index = 0;
+
+document.getElementById(&quot;slide&quot;).src = gambar[index];
+
+function next() {
+  index++;
+  if(index &gt;= gambar.length) index = 0;
+  document.getElementById(&quot;slide&quot;).src = gambar[index];
+}
+
+function prev() {
+  index--;
+  if(index &lt; 0) index = gambar.length - 1;
+  document.getElementById(&quot;slide&quot;).src = gambar[index];
+}
+&lt;/script&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <!-- NAVIGASI KE BAB BERIKUTNYA -->
+        <a href="bab13.html" class="btn primary full"> Lanjut ke Bab 13 ➜ </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span></span>
+            </a>
+
+            <p class="footer-desc">
+              Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">Tentang</a></li>
+              <li><a href="../materi/" class="footer-links-active">Materi</a></li>
+              <li><a href="../contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2026 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

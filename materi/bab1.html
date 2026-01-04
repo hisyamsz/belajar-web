@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="id">
   <!--
-  Nama file      : bab2.html
+  Nama file      : bab1.html
   Tanggal ngoding: 22 Desember 2025
   Kelas          : 05TPLP015
   Kelompok       : 5
   Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
-  Deskripsi      : Halaman Materi Bab 2 berisi pembahasan struktur HTML5
-                    yang mencakup elemen, atribut, heading, paragraf,
-                    hyperlink, gambar, list, tabel, dan elemen semantik.
-                    Disajikan dalam bentuk accordion serta tombol
+  Deskripsi      : Halaman Materi Bab 1 membahas pengenalan dasar
+                    pemrograman web yang mencakup pengertian web,
+                    peran front-end dan back-end, alur kerja pembuatan
+                    website, tools pengembangan, serta dasar HTML.
+                    Disajikan dalam bentuk accordion dan tombol
                     show/hide kode menggunakan JavaScript.
   -->
 
@@ -17,7 +18,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Bab 2 Struktur Dasar HTML5</title>
+    <title>Bab 1 Pendahuluan Pemrograman Web</title>
   </head>
 
   <body>
@@ -51,50 +52,132 @@
       <!-- HERO PEMBUKA -->
       <article class="hero">
         <div class="hero-content">
-          <span class="badge">Bab 2</span>
-          <h2>Struktur Dasar HTML5</h2>
+          <span class="badge">Bab 1</span>
+          <h2>Pendahuluan Pemrograman Web</h2>
 
           <p class="hero-desc">
-            Pada bab ini kamu akan mempelajari struktur dasar dokumen HTML5, elemen dan atribut, penggunaan heading dan
-            paragraf, serta elemen konten seperti hyperlink, gambar, list, tabel, dan elemen semantik.
+            Pada bab ini kamu akan mempelajari dasar-dasar pemrograman web, perbedaan front-end dan back-end, alur kerja
+            pengembangan website, tools yang digunakan programmer web, serta pengenalan dasar HTML.
           </p>
         </div>
       </article>
 
       <!-- ====== AKORDION SUB BAB ====== -->
       <section class="lessons">
-        <!-- ================= SUB BAB 2.1 ================= -->
+        <!-- ================= 1.1 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.1 Tag, Elemen, dan Atribut HTML
+            1.1 Apa Itu Pemrograman Web?
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML tersusun dari elemen-elemen yang ditulis menggunakan tag. Setiap elemen dapat memiliki atribut untuk
-              memberikan informasi tambahan pada suatu tag.
+              Pemrograman web adalah proses membuat aplikasi atau halaman web yang dapat diakses melalui browser
+              menggunakan teknologi seperti HTML, CSS, dan JavaScript.
             </p>
 
             <ul class="topic-list">
-              <li>Tag berfungsi sebagai penanda struktur dokumen</li>
-              <li>Elemen terdiri dari tag pembuka, isi, dan tag penutup</li>
-              <li>Atribut digunakan untuk menambahkan properti pada elemen</li>
+              <li>Digunakan untuk membuat website & aplikasi berbasis web</li>
+              <li>Dapat diakses melalui internet maupun jaringan lokal</li>
+              <li>Berjalan di sisi client, server, atau keduanya</li>
             </ul>
           </div>
         </div>
 
-        <!-- ================= SUB BAB 2.2 ================= -->
+        <!-- ================= 1.2 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.2 Struktur Utama Dokumen HTML5
+            1.2 Peran Front-End dan Back-End
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Dokumen HTML memiliki struktur utama yang terdiri dari DOCTYPE, elemen html, bagian head untuk metadata,
-              dan body sebagai tempat menampilkan konten halaman.
+              Dalam pengembangan web, front-end berfokus pada tampilan yang dilihat pengguna, sedangkan back-end
+              mengelola logika program dan pengolahan data pada server.
+            </p>
+
+            <ul class="topic-list">
+              <li>Front-End ➜ UI, tampilan, interaksi pengguna</li>
+              <li>Back-End ➜ database, server, pemrosesan data</li>
+              <li>Keduanya saling terhubung dalam satu sistem</li>
+            </ul>
+
+            <pre class="code-block">
+Front-End  ➜ Browser / Client
+Back-End   ➜ Server & Database
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= 1.3 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            1.3 Alur Kerja Pembuatan Website
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Pembuatan website dilakukan melalui beberapa tahapan mulai dari perancangan, penulisan kode, pengujian,
+              hingga proses deployment.
+            </p>
+
+            <ul class="topic-list">
+              <li>Analisis & Perancangan</li>
+              <li>Desain Tampilan</li>
+              <li>Pengembangan Front-End & Back-End</li>
+              <li>Testing & Perbaikan Bug</li>
+              <li>Deploy ke Hosting</li>
+            </ul>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Diagram Alur</button>
+
+            <pre class="code-box">
+<code>
+Desain ➜ Coding ➜ Testing ➜ Deploy ➜ Maintenance
+</code>
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= 1.4 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            1.4 Tools yang Diperlukan Programmer Web
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Beberapa tools digunakan untuk membantu proses pengembangan website agar lebih terstruktur dan efisien.
+            </p>
+
+            <ul class="topic-list">
+              <li>VS Code ➜ editor kode</li>
+              <li>Browser (Chrome / Firefox) ➜ menjalankan website</li>
+              <li>Git & GitHub ➜ pengelolaan versi kode</li>
+            </ul>
+
+            <pre class="code-block">
+Programmer Web biasanya menggunakan:
+VS Code • Terminal • Git • Browser Developer Tools
+            </pre>
+          </div>
+        </div>
+
+        <!-- ================= 1.5 ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            1.5 Dasar HTML (HyperText Markup Language)
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              HTML digunakan untuk menyusun struktur konten halaman web seperti teks, gambar, tautan, tabel, dan elemen
+              lainnya.
             </p>
 
             <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
@@ -102,14 +185,14 @@
             <pre class="code-box">
 <code>
 &lt;!DOCTYPE html&gt;
-&lt;html lang="id"&gt;
+&lt;html&gt;
   &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Struktur HTML5&lt;/title&gt;
+    &lt;title&gt;Halaman Pertama&lt;/title&gt;
   &lt;/head&gt;
 
   &lt;body&gt;
-    Konten halaman ditulis pada bagian body.
+    &lt;h1&gt;Selamat Datang di Pemrograman Web&lt;/h1&gt;
+    &lt;p&gt;Ini adalah struktur dasar HTML.&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code>
@@ -117,87 +200,7 @@
           </div>
         </div>
 
-        <!-- ================= SUB BAB 2.3 ================= -->
-        <div class="accordion">
-          <button class="accordion-header">
-            2.3 Heading dan Paragraf
-            <span class="accordion-icon">+</span>
-          </button>
-
-          <div class="accordion-body">
-            <p class="lesson-desc">
-              Heading digunakan sebagai judul dan subjudul yang memiliki tingkat hierarki, sedangkan paragraf digunakan
-              untuk menuliskan isi teks.
-            </p>
-
-            <ul class="topic-list">
-              <li>Heading terdiri dari h1 sampai h6</li>
-              <li>h1 digunakan sebagai judul utama halaman</li>
-              <li>Paragraf ditulis menggunakan elemen &lt;p&gt;</li>
-            </ul>
-
-            <button class="btn outline small toggle-code-btn">Show / Hide Code</button>
-
-            <pre class="code-box">
-<code>
-&lt;h1&gt;Judul Utama&lt;/h1&gt;
-&lt;h2&gt;Subjudul Materi&lt;/h2&gt;
-
-&lt;p&gt;Ini adalah contoh paragraf pada dokumen HTML.&lt;/p&gt;
-</code>
-            </pre>
-          </div>
-        </div>
-
-        <!-- ================= SUB BAB 2.4 ================= -->
-        <div class="accordion">
-          <button class="accordion-header">
-            2.4 Hyperlink, Gambar, List, dan Tabel
-            <span class="accordion-icon">+</span>
-          </button>
-
-          <div class="accordion-body">
-            <p class="lesson-desc">
-              HTML menyediakan berbagai elemen untuk menampilkan konten seperti tautan, gambar, daftar, serta tabel
-              sebagai penyaji data terstruktur.
-            </p>
-
-            <ul class="topic-list">
-              <li>&lt;a&gt; digunakan untuk membuat hyperlink</li>
-              <li>&lt;img&gt; digunakan untuk menampilkan gambar</li>
-              <li>&lt;ul&gt; dan &lt;ol&gt; digunakan untuk membuat daftar</li>
-              <li>&lt;table&gt; digunakan untuk menampilkan data dalam baris & kolom</li>
-            </ul>
-
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
-
-            <pre class="code-box">
-<code>
-&lt;a href="https://example.com"&gt;Kunjungi Website&lt;/a&gt;
-
-&lt;img src="gambar.png" alt="Contoh Gambar"&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Nama&lt;/th&gt;
-    &lt;th&gt;Kelas&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Hisyam&lt;/td&gt;
-    &lt;td&gt;05TPLP015&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</code>
-            </pre>
-          </div>
-        </div>
-
-        <a href="bab3.html" class="btn primary full">Lanjut ke Bab 3 ➜</a>
+        <a href="bab2.html" class="btn primary full">Lanjut ke Bab 2 ➜</a>
       </section>
     </main>
 

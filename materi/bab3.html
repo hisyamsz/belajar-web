@@ -6,17 +6,17 @@
   Kelas          : 05TPLP015
   Kelompok       : 5
   Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
-  Deskripsi      : Halaman Materi Bab 3 berisi pengenalan dasar CSS
-                    meliputi fungsi CSS, selector, properti, warna, margin,
-                    padding, dan penggunaan kelas serta id. Dilengkapi
-                    accordion dan tombol show/hide kode.
+  Deskripsi      : Halaman Materi Bab 3 membahas struktur semantik HTML5
+                    meliputi penggunaan elemen header, nav, section, article,
+                    dan footer, manfaat semantik untuk SEO dan aksesibilitas,
+                    serta latihan membuat halaman web sederhana.
   -->
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Bab 3 Pengenalan CSS Dasar</title>
+    <title>Bab 3 Struktur Semantik HTML5</title>
   </head>
 
   <body>
@@ -51,134 +51,184 @@
       <article class="hero">
         <div class="hero-content">
           <span class="badge">Bab 3</span>
-          <h2>Pengenalan CSS Dasar</h2>
+          <h2>Struktur Semantik HTML5</h2>
 
           <p class="hero-desc">
-            Pada bab ini kamu akan mempelajari dasar-dasar CSS, fungsi CSS dalam mengatur tampilan website, penggunaan
-            selector, properti gaya, serta cara mengatur warna, teks, jarak, dan layout elemen.
+            Pada bab ini kamu akan mempelajari penggunaan elemen semantik dalam HTML5 yang membantu menjelaskan struktur
+            halaman web, meningkatkan keterbacaan kode, serta memudahkan optimasi SEO dan aksesibilitas.
           </p>
         </div>
       </article>
 
-      <!-- ====== AKORDION SUB BAB ====== -->
       <section class="lessons">
         <!-- ================= SUB BAB 3.1 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            3.1 Apa itu CSS dan Fungsinya?
+            3.1 Elemen &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt;
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              CSS digunakan untuk mengatur tampilan dan desain halaman web. Dengan CSS, elemen HTML dapat diberi warna,
-              ukuran, tata letak, dan gaya visual agar website lebih rapi dan menarik.
+              Elemen semantik digunakan untuk menjelaskan fungsi bagian-bagian halaman sehingga struktur web menjadi
+              lebih teratur dan mudah dipahami.
             </p>
 
             <ul class="topic-list">
-              <li>CSS memisahkan konten (HTML) dan tampilan (style)</li>
-              <li>Memudahkan pengelolaan desain halaman web</li>
-              <li>Satu file CSS dapat digunakan pada banyak halaman</li>
+              <li>&lt;header&gt; ➜ bagian kepala halaman / judul</li>
+              <li>&lt;nav&gt; ➜ menu navigasi</li>
+              <li>&lt;section&gt; ➜ pengelompokkan konten</li>
+              <li>&lt;article&gt; ➜ konten utama / artikel mandiri</li>
+              <li>&lt;footer&gt; ➜ informasi bagian bawah halaman</li>
             </ul>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Struktur</button>
+
+            <pre class="code-box">
+<code>
+&lt;header&gt;
+  &lt;h1&gt;Belajar Web Development&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;Materi&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Struktur Semantik HTML5&lt;/h2&gt;
+    &lt;p&gt;Contoh penggunaan elemen semantik.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2026 Kelompok 5&lt;/p&gt;
+&lt;/footer&gt;
+</code>
+            </pre>
           </div>
         </div>
 
         <!-- ================= SUB BAB 3.2 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            3.2 Cara Menghubungkan CSS ke HTML
+            3.2 Manfaat Semantik untuk SEO dan Aksesibilitas
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              CSS dapat ditulis menggunakan tiga metode, yaitu inline style, internal style di dalam tag head, dan
-              external stylesheet menggunakan file terpisah.
+              Elemen semantik membantu mesin pencari dan screen reader memahami struktur konten sehingga halaman lebih
+              ramah SEO dan mudah diakses.
             </p>
 
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
-
-            <pre class="code-box">
-<code>
-/* External CSS */
-&lt;link rel="stylesheet" href="style.css"&gt;
-
-/* Internal CSS */
-&lt;style&gt;
-  h1 { color: blue; }
-&lt;/style&gt;
-
-/* Inline CSS */
-&lt;p style="color:red;"&gt;Teks berwarna merah&lt;/p&gt;
-</code>
-            </pre>
+            <ul class="topic-list">
+              <li>Meningkatkan struktur dokumen</li>
+              <li>Mempermudah Google membaca konten</li>
+              <li>Mendukung pengguna disabilitas (screen reader)</li>
+              <li>Kode lebih rapi dan mudah dipelihara</li>
+            </ul>
           </div>
         </div>
 
         <!-- ================= SUB BAB 3.3 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            3.3 Selector, Class, dan ID
+            3.3 Latihan Membuat Halaman Sederhana
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Selector digunakan untuk memilih elemen yang akan diberikan style. Class digunakan untuk banyak elemen,
-              sedangkan ID hanya untuk satu elemen khusus.
+              Berikut contoh latihan pembuatan halaman blog sederhana dengan struktur semantik HTML5.
             </p>
 
-            <ul class="topic-list">
-              <li>Tag selector : memilih berdasarkan nama elemen</li>
-              <li>Class selector : menggunakan tanda titik (.)</li>
-              <li>ID selector : menggunakan tanda pagar (#)</li>
-            </ul>
-
-            <button class="btn outline small toggle-code-btn">Show / Hide Code</button>
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Latihan</button>
 
             <pre class="code-box">
 <code>
-h1 { color: green; }
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Blog Teknologi Masa Depan&lt;/title&gt;
+&lt;/head&gt;
 
-.container { padding: 20px; }
+&lt;body&gt;
 
-#judul-utama { font-weight: bold; }
-</code>
-            </pre>
-          </div>
-        </div>
+&lt;header&gt;
+  &lt;h1&gt;TechVision5 Blog&lt;/h1&gt;
+  &lt;p&gt;Wawasan Teknologi Terkini untuk Indonesia&lt;/p&gt;
+&lt;/header&gt;
 
-        <!-- ================= SUB BAB 3.4 ================= -->
-        <div class="accordion">
-          <button class="accordion-header">
-            3.4 Properti Warna, Margin, dan Padding
-            <span class="accordion-icon">+</span>
-          </button>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;Beranda&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tutorial"&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#news"&gt;Berita&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact"&gt;Kontak&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 
-          <div class="accordion-body">
-            <p class="lesson-desc">
-              CSS menyediakan properti untuk mengatur warna, jarak di luar elemen (margin), serta jarak di dalam elemen
-              (padding) agar tampilan lebih terstruktur dan nyaman dilihat.
-            </p>
+&lt;div class="container"&gt;
 
-            <ul class="topic-list">
-              <li>color = mengatur warna teks</li>
-              <li>background-color = memberi warna latar</li>
-              <li>margin = jarak luar elemen</li>
-              <li>padding = jarak dalam elemen</li>
-            </ul>
+  &lt;main&gt;
+    &lt;article&gt;
 
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
+      &lt;header&gt;
+        &lt;h2&gt;Mengenal HTML5 Semantik&lt;/h2&gt;
+        &lt;p&gt;Ditulis oleh &lt;strong&gt;Admin&lt;/strong&gt; pada 10 Oktober 2025&lt;/p&gt;
+      &lt;/header&gt;
 
-            <pre class="code-box">
-<code>
-.box {
-  color: white;
-  background-color: #0d6efd;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 10px;
-}
+      &lt;section&gt;
+        &lt;h3&gt;Apa itu Semantik?&lt;/h3&gt;
+        &lt;p&gt;Semantik berarti kode yang menjelaskan dirinya sendiri dan
+        membantu mesin pencari memahami konten.&lt;/p&gt;
+      &lt;/section&gt;
+
+      &lt;section&gt;
+        &lt;h3&gt;Mengapa Penting?&lt;/h3&gt;
+        &lt;p&gt;Penting untuk SEO dan aksesibilitas. Berikut manfaatnya:&lt;/p&gt;
+        &lt;ol&gt;
+          &lt;li&gt;Kode lebih rapi&lt;/li&gt;
+          &lt;li&gt;Ramah screen reader&lt;/li&gt;
+          &lt;li&gt;Ranking Google lebih baik&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/section&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;Tags:
+          &lt;a href="#"&gt;HTML&lt;/a&gt;,
+          &lt;a href="#"&gt;Coding&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/footer&gt;
+
+    &lt;/article&gt;
+  &lt;/main&gt;
+
+  &lt;aside&gt;
+    &lt;h3&gt;Tentang Penulis&lt;/h3&gt;
+    &lt;img src="gambar/penulis.jpg" alt="Foto Profil Penulis" width="100"&gt;
+    &lt;p&gt;Seorang pengembang web yang antusias berbagi ilmu.&lt;/p&gt;
+
+    &lt;h3&gt;Arsip Bulanan&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;September 2025&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Agustus 2025&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/aside&gt;
+
+&lt;/div&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2025 TechVision5 Blog. Hak Cipta Dilindungi.&lt;/p&gt;
+  &lt;p&gt;Ikuti kami di &lt;a href="#"&gt;Instagram&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 </code>
             </pre>
           </div>
@@ -188,16 +238,14 @@ h1 { color: green; }
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">
               <div class="footer-logo-icon">;</div>
-              <span class="footer-logo-text"> Belajar<span>Web</span> </span>
+              <span class="footer-logo-text"> Belajar<span>Web</span></span>
             </a>
-
             <p class="footer-desc">
               Belajar web development dengan cara yang menyenangkan! Dari pemula hingga siap membuat website sendiri.
             </p>

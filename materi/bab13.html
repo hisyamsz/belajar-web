@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+  <!--
+  Nama file      : bab13.html
+  Kelas          : 05TPLP015
+  Kelompok       : 5
+  Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
+  Deskripsi      : Bab 13 - Membangun Website Responsif (RWD, Media Query, Tailwind)
+  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Bab 13 - Membangun Website Responsif</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">;</div>
+          <span class="logo-text"> Belajar<span>Web</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">Tentang</a></li>
+          <li><a href="#" class="nav-link active">Materi</a></li>
+          <li><a href="../contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../about.html" class="nav-link">Tentang</a>
+        <a href="#" class="nav-link active">Materi</a>
+        <a href="../contact.html" class="nav-link">Kontak</a>
+      </div>
+    </nav>
+
+    <main class="bab-materi">
+      <!-- HERO -->
+      <article class="hero">
+        <div class="hero-content">
+          <span class="badge">Bab 13</span>
+          <h2>Membangun Website Responsif</h2>
+
+          <p class="hero-desc">
+            Pada bab ini kamu mempelajari konsep Responsive Web Design (RWD), penggunaan Media Queries pada CSS, serta
+            penerapan responsivitas menggunakan Tailwind CSS.
+          </p>
+        </div>
+      </article>
+
+      <section class="lessons">
+        <!-- ================= 13.1 RWD ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            13.1 Konsep Responsive Web Design (RWD)
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">
+              Responsive Web Design adalah pendekatan desain web yang membuat tampilan website menyesuaikan ukuran layar
+              perangkat seperti smartphone, tablet, maupun desktop.
+            </p>
+
+            <ul class="lesson-points">
+              <li>Konten dapat menyesuaikan ukuran layar</li>
+              <li>Layout fleksibel</li>
+              <li>Teks tetap mudah dibaca</li>
+              <li>Elemen tidak saling bertabrakan</li>
+            </ul>
+
+            <h4>Contoh Struktur Layout Fleksibel</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode</button>
+
+            <pre class="code-box"><code>
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;Konten 1&lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;Konten 2&lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;Konten 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <pre class="code-box"><code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+</code></pre>
+          </div>
+        </div>
+
+        <!-- ================= 13.2 MEDIA QUERY ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            13.2 Media Queries pada CSS
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">Media Query digunakan untuk mengubah layout berdasarkan ukuran layar device.</p>
+
+            <h4>Breakpoint Umum</h4>
+
+            <ul class="lesson-points">
+              <li>max-width: 1200px → Laptop</li>
+              <li>max-width: 992px → Tablet</li>
+              <li>max-width: 768px → Tablet kecil</li>
+              <li>max-width: 576px → Smartphone</li>
+            </ul>
+
+            <h4>Contoh Media Query</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode</button>
+
+            <pre class="code-box"><code>
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</code></pre>
+
+            <pre class="code-box"><code>
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+</code></pre>
+          </div>
+        </div>
+
+        <!-- ================= 13.3 TAILWIND ================= -->
+        <div class="accordion">
+          <button class="accordion-header">
+            13.3 Responsif dengan Tailwind CSS
+            <span class="accordion-icon">+</span>
+          </button>
+
+          <div class="accordion-body">
+            <p class="lesson-desc">Tailwind CSS menyediakan kelas responsif bawaan menggunakan prefix breakpoint.</p>
+
+            <ul class="lesson-points">
+              <li><b>sm:</b> Smartphone</li>
+              <li><b>md:</b> Tablet</li>
+              <li><b>lg:</b> Laptop</li>
+              <li><b>xl:</b> Desktop</li>
+            </ul>
+
+            <h4>Contoh Grid Responsif</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Tailwind</button>
+
+            <pre class="code-box"><code>
+&lt;div class=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;&gt;
+  &lt;div class=&quot;p-4 bg-slate-200&quot;&gt;Box 1&lt;/div&gt;
+  &lt;div class=&quot;p-4 bg-slate-300&quot;&gt;Box 2&lt;/div&gt;
+  &lt;div class=&quot;p-4 bg-slate-400&quot;&gt;Box 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Contoh Button Responsif</h4>
+
+            <button class="btn outline small toggle-code-btn">Tampilkan Kode Tailwind</button>
+
+            <pre class="code-box"><code>
+&lt;button class=&quot;px-6 py-2 bg-blue-600 text-white sm:text-sm md:text-base lg:text-lg rounded-lg&quot;&gt;
+  Tombol Responsif
+&lt;/button&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <!-- END OF MATERIAL -->
+        <a href="../index.html" class="btn primary full"> Selesai - Kembali ke Beranda ➜ </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="footer-logo">
+              <div class="footer-logo-icon">;</div>
+              <span class="footer-logo-text"> Belajar<span>Web</span></span>
+            </a>
+
+            <p class="footer-desc">Belajar web development dari dasar hingga siap membangun website sendiri.</p>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">Tentang</a></li>
+              <li><a href="../materi/" class="footer-links-active">Materi</a></li>
+              <li><a href="../contact.html">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Made with <span class="heart">♥</span> Kelompok 5 • © 2026 Belajar Web</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

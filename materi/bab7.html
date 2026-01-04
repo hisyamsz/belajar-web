@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="id">
   <!--
-  Nama file      : bab2.html
+  Nama file      : bab7.html
   Tanggal ngoding: 22 Desember 2025
   Kelas          : 05TPLP015
   Kelompok       : 5
   Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
-  Deskripsi      : Halaman Materi Bab 2 membahas struktur dasar HTML5
-                    yang meliputi elemen, tag, dan atribut, penggunaan
-                    heading, paragraf, hyperlink, gambar, list, table,
-                    serta dasar pembuatan formulir dan input.
-                    Disajikan dalam bentuk accordion dan tombol
-                    show/hide kode menggunakan JavaScript.
+  Deskripsi      : Halaman Materi Bab 7 membahas CSS Frameworks Modern
+                    meliputi pengenalan Bootstrap & Tailwind CSS,
+                    penggunaan utility class untuk mempercepat styling,
+                    serta perbandingan framework dan CSS murni.
   -->
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Bab 2 Struktur Dasar HTML5</title>
+    <title>Bab 7 CSS Frameworks Modern</title>
   </head>
 
   <body>
@@ -49,145 +47,129 @@
     </nav>
 
     <main class="bab-materi">
-      <!-- HERO PEMBUKA -->
+      <!-- HERO -->
       <article class="hero">
         <div class="hero-content">
-          <span class="badge">Bab 2</span>
-          <h2>Struktur Dasar HTML5</h2>
+          <span class="badge">Bab 7</span>
+          <h2>CSS Frameworks Modern</h2>
 
           <p class="hero-desc">
-            Pada bab ini kamu akan mempelajari penyusunan struktur halaman menggunakan elemen HTML, cara penggunaan tag
-            dan atribut, penulisan heading, paragraf, link, gambar, list, table, serta dasar pembuatan formulir dan
-            input pada halaman web.
+            Pada bab ini kamu akan mempelajari penggunaan CSS Frameworks modern seperti Bootstrap dan Tailwind CSS untuk
+            mempercepat proses styling dan pembuatan komponen antarmuka website.
           </p>
         </div>
       </article>
 
-      <!-- ====== AKORDION SUB BAB ====== -->
       <section class="lessons">
-        <!-- ================= 2.1 ================= -->
+        <!-- ================= SUB BAB 7.1 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.1 Elemen, Tag, dan Atribut
+            7.1 Pengenalan Bootstrap dan Tailwind CSS
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML dibangun dari elemen-elemen yang ditulis menggunakan tag. Sebagian elemen memiliki atribut yang
-              berfungsi memberikan informasi tambahan pada suatu tag.
+              CSS Framework menyediakan kumpulan class dan komponen siap pakai sehingga pembuatan layout dan tampilan
+              website dapat dilakukan lebih cepat dan konsisten.
             </p>
 
             <ul class="topic-list">
-              <li>Tag ➜ penanda awal dan akhir elemen</li>
-              <li>Elemen ➜ terdiri dari tag pembuka, isi, dan tag penutup</li>
-              <li>Atribut ➜ menambahkan properti pada elemen</li>
+              <li>Bootstrap ➜ berbasis komponen &amp; grid system</li>
+              <li>Tailwind CSS ➜ berbasis utility class</li>
+              <li>Mengurangi penulisan kode CSS manual</li>
+              <li>Membantu standarisasi tampilan</li>
             </ul>
 
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Import Framework</button>
 
             <pre class="code-box">
 <code>
-&lt;p title="deskripsi paragraf"&gt;
-  Ini adalah elemen paragraf dengan atribut.
-&lt;/p&gt;
+&lt;!-- Bootstrap via jsDelivr --&gt;
+&lt;link rel=&quot;stylesheet&quot;
+href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot;&gt;
+
+&lt;!-- Tailwind CDN --&gt;
+&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= 2.2 ================= -->
+        <!-- ================= SUB BAB 7.2 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.2 Heading, Paragraf, Link, Gambar, List, Table
+            7.2 Membuat Komponen Cepat dengan Tailwind
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML menyediakan berbagai elemen untuk menampilkan teks, tautan, gambar, daftar, dan tabel sebagai
-              penyusun konten halaman.
+              Tailwind CSS menggunakan pendekatan utility-first sehingga style dapat langsung diterapkan pada elemen
+              HTML melalui class pendukung.
             </p>
 
-            <ul class="topic-list">
-              <li>Heading h1–h6 ➜ judul & subjudul</li>
-              <li>Paragraf ➜ elemen &lt;p&gt;</li>
-              <li>Hyperlink ➜ elemen &lt;a&gt;</li>
-              <li>Gambar ➜ elemen &lt;img&gt;</li>
-              <li>List ➜ &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
-              <li>Table ➜ &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</li>
-            </ul>
-
-            <button class="btn outline small toggle-code-btn">Show / Hide Contoh Kode</button>
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Komponen</button>
 
             <pre class="code-box">
 <code>
-&lt;h1&gt;Judul Halaman&lt;/h1&gt;
-&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+&lt;button class=&quot;px-4 py-2 bg-blue-600 text-white rounded-lg shadow&quot;&gt;
+  Tombol Aksi
+&lt;/button&gt;
 
-&lt;a href="https://example.com"&gt;Kunjungi Website&lt;/a&gt;
-
-&lt;img src="foto.png" alt="Contoh Gambar"&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Nama&lt;/th&gt;
-    &lt;th&gt;Kelas&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Hisyam&lt;/td&gt;
-    &lt;td&gt;05TPLP015&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+&lt;div class=&quot;p-4 mt-3 border rounded-lg bg-gray-100&quot;&gt;
+  &lt;h3 class=&quot;text-lg font-semibold&quot;&gt;Card Tailwind&lt;/h3&gt;
+  &lt;p class=&quot;text-sm text-gray-600&quot;&gt;Contoh komponen sederhana&lt;/p&gt;
+&lt;/div&gt;
 </code>
             </pre>
+
+            <ul class="topic-list">
+              <li>Pembuatan komponen lebih cepat</li>
+              <li>Kode tampak ringkas &amp; efisien</li>
+              <li>Sangat mendukung pengembangan UI modern</li>
+            </ul>
           </div>
         </div>
 
-        <!-- ================= 2.3 ================= -->
+        <!-- ================= SUB BAB 7.3 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.3 Formulir dan Input
+            7.3 Perbandingan Framework vs CSS Murni
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Formulir digunakan untuk menerima data dari pengguna melalui elemen input seperti text field, email,
-              password, dan tombol submit.
+              Framework membantu percepatan pengembangan, namun pemahaman CSS murni tetap diperlukan agar pengembang
+              memiliki kendali penuh terhadap tampilan dan perilaku elemen.
             </p>
 
             <ul class="topic-list">
-              <li>&lt;form&gt; ➜ membungkus input pengguna</li>
-              <li>&lt;input&gt; ➜ text, email, password, number</li>
-              <li>&lt;label&gt; ➜ penanda nama field</li>
-              <li>&lt;button&gt; ➜ mengirim data</li>
+              <li>Framework ➜ cepat &amp; praktis</li>
+              <li>CSS Murni ➜ fleksibel &amp; detail</li>
+              <li>Keduanya saling melengkapi</li>
             </ul>
 
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Form</button>
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Perbandingan</button>
 
             <pre class="code-box">
 <code>
-&lt;form&gt;
-  &lt;label&gt;Nama&lt;/label&gt;
-  &lt;input type="text" placeholder="Masukkan nama"&gt;
+/* CSS Murni */
+.button {
+  background: blue;
+  color: white;
+  padding: 10px;
+}
 
-  &lt;label&gt;Email&lt;/label&gt;
-  &lt;input type="email" placeholder="Masukkan email"&gt;
-
-  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
-&lt;/form&gt;
+/* Tailwind */
+class=&quot;bg-blue-600 text-white px-3 py-2&quot;
 </code>
             </pre>
           </div>
         </div>
 
-        <a href="bab3.html" class="btn primary full">Lanjut ke Bab 3 ➜</a>
+        <a href="bab8.html" class="btn primary full">Lanjut ke Bab 8 ➜</a>
       </section>
     </main>
 

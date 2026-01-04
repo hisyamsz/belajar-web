@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="id">
   <!--
-  Nama file      : bab2.html
+  Nama file      : bab5.html
   Tanggal ngoding: 22 Desember 2025
   Kelas          : 05TPLP015
   Kelompok       : 5
   Anggota        : Hisyam Santoso, Kaka Ashadie, Moch. Ariel Hidayatullah
-  Deskripsi      : Halaman Materi Bab 2 membahas struktur dasar HTML5
-                    yang meliputi elemen, tag, dan atribut, penggunaan
-                    heading, paragraf, hyperlink, gambar, list, table,
-                    serta dasar pembuatan formulir dan input.
-                    Disajikan dalam bentuk accordion dan tombol
-                    show/hide kode menggunakan JavaScript.
+  Deskripsi      : Halaman Materi Bab 5 membahas layout dasar CSS yang
+                    meliputi konsep box model, properti margin-padding-border,
+                    sistem positioning elemen, serta penggunaan display dan
+                    visibility pada elemen HTML.
   -->
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Bab 2 Struktur Dasar HTML5</title>
+    <title>Bab 5 Layout Dasar dengan CSS</title>
   </head>
 
   <body>
@@ -52,142 +50,146 @@
       <!-- HERO PEMBUKA -->
       <article class="hero">
         <div class="hero-content">
-          <span class="badge">Bab 2</span>
-          <h2>Struktur Dasar HTML5</h2>
+          <span class="badge">Bab 5</span>
+          <h2>Layout Dasar dengan CSS</h2>
 
           <p class="hero-desc">
-            Pada bab ini kamu akan mempelajari penyusunan struktur halaman menggunakan elemen HTML, cara penggunaan tag
-            dan atribut, penulisan heading, paragraf, link, gambar, list, table, serta dasar pembuatan formulir dan
-            input pada halaman web.
+            Pada bab ini kamu akan mempelajari dasar penyusunan layout halaman web menggunakan CSS, dimulai dari konsep
+            box model, sistem positioning, hingga pengaturan display dan visibility elemen.
           </p>
         </div>
       </article>
 
       <!-- ====== AKORDION SUB BAB ====== -->
       <section class="lessons">
-        <!-- ================= 2.1 ================= -->
+        <!-- ================= SUB BAB 5.1 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.1 Elemen, Tag, dan Atribut
+            5.1 Box Model (Margin, Padding, Border)
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML dibangun dari elemen-elemen yang ditulis menggunakan tag. Sebagian elemen memiliki atribut yang
-              berfungsi memberikan informasi tambahan pada suatu tag.
+              Setiap elemen HTML memiliki struktur box model yang terdiri dari content, padding, border, dan margin.
+              Konsep ini penting untuk mengatur jarak dan tata letak elemen pada halaman web.
             </p>
 
             <ul class="topic-list">
-              <li>Tag ➜ penanda awal dan akhir elemen</li>
-              <li>Elemen ➜ terdiri dari tag pembuka, isi, dan tag penutup</li>
-              <li>Atribut ➜ menambahkan properti pada elemen</li>
+              <li>Content ➜ isi elemen</li>
+              <li>Padding ➜ jarak di dalam elemen</li>
+              <li>Border ➜ garis tepi elemen</li>
+              <li>Margin ➜ jarak antar elemen</li>
             </ul>
 
             <button class="btn outline small toggle-code-btn">Tampilkan Contoh Kode</button>
 
             <pre class="code-box">
 <code>
-&lt;p title="deskripsi paragraf"&gt;
-  Ini adalah elemen paragraf dengan atribut.
-&lt;/p&gt;
+.card {
+  width: 200px;
+  padding: 12px;
+  margin: 10px;
+  border: 2px solid #0d6efd;
+  border-radius: 10px;
+}
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= 2.2 ================= -->
+        <!-- ================= SUB BAB 5.2 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.2 Heading, Paragraf, Link, Gambar, List, Table
+            5.2 Positioning (Static, Relative, Absolute, Fixed)
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              HTML menyediakan berbagai elemen untuk menampilkan teks, tautan, gambar, daftar, dan tabel sebagai
-              penyusun konten halaman.
+              Positioning digunakan untuk mengatur penempatan elemen pada layar. Setiap nilai posisi memiliki fungsi
+              yang berbeda sesuai kebutuhan layout halaman web.
             </p>
 
             <ul class="topic-list">
-              <li>Heading h1–h6 ➜ judul & subjudul</li>
-              <li>Paragraf ➜ elemen &lt;p&gt;</li>
-              <li>Hyperlink ➜ elemen &lt;a&gt;</li>
-              <li>Gambar ➜ elemen &lt;img&gt;</li>
-              <li>List ➜ &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</li>
-              <li>Table ➜ &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</li>
+              <li>static ➜ posisi default elemen</li>
+              <li>relative ➜ bergerak relatif terhadap posisi awal</li>
+              <li>absolute ➜ diposisikan terhadap parent terdekat</li>
+              <li>fixed ➜ menempel pada layar (tidak ikut scroll)</li>
             </ul>
 
-            <button class="btn outline small toggle-code-btn">Show / Hide Contoh Kode</button>
+            <button class="btn outline small toggle-code-btn">Show / Hide Code</button>
 
             <pre class="code-box">
 <code>
-&lt;h1&gt;Judul Halaman&lt;/h1&gt;
-&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+.box-relative {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
 
-&lt;a href="https://example.com"&gt;Kunjungi Website&lt;/a&gt;
+.box-absolute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
-&lt;img src="foto.png" alt="Contoh Gambar"&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Nama&lt;/th&gt;
-    &lt;th&gt;Kelas&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Hisyam&lt;/td&gt;
-    &lt;td&gt;05TPLP015&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 </code>
             </pre>
           </div>
         </div>
 
-        <!-- ================= 2.3 ================= -->
+        <!-- ================= SUB BAB 5.3 ================= -->
         <div class="accordion">
           <button class="accordion-header">
-            2.3 Formulir dan Input
+            5.3 Display dan Visibility
             <span class="accordion-icon">+</span>
           </button>
 
           <div class="accordion-body">
             <p class="lesson-desc">
-              Formulir digunakan untuk menerima data dari pengguna melalui elemen input seperti text field, email,
-              password, dan tombol submit.
+              Properti display mengatur bagaimana elemen ditampilkan dalam layout, sedangkan visibility menentukan
+              apakah elemen terlihat atau disembunyikan.
             </p>
 
             <ul class="topic-list">
-              <li>&lt;form&gt; ➜ membungkus input pengguna</li>
-              <li>&lt;input&gt; ➜ text, email, password, number</li>
-              <li>&lt;label&gt; ➜ penanda nama field</li>
-              <li>&lt;button&gt; ➜ mengirim data</li>
+              <li>display: block ➜ elemen menempati satu baris penuh</li>
+              <li>display: inline ➜ sebaris dengan elemen lain</li>
+              <li>display: inline-block ➜ bisa diatur ukuran</li>
+              <li>visibility: hidden ➜ elemen disembunyikan</li>
             </ul>
 
-            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Form</button>
+            <button class="btn outline small toggle-code-btn">Tampilkan Contoh Styling</button>
 
             <pre class="code-box">
 <code>
-&lt;form&gt;
-  &lt;label&gt;Nama&lt;/label&gt;
-  &lt;input type="text" placeholder="Masukkan nama"&gt;
+.block {
+  display: block;
+}
 
-  &lt;label&gt;Email&lt;/label&gt;
-  &lt;input type="email" placeholder="Masukkan email"&gt;
+.inline {
+  display: inline;
+}
 
-  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
-&lt;/form&gt;
+.inline-block {
+  display: inline-block;
+  width: 120px;
+}
+
+.hidden {
+  visibility: hidden;
+}
 </code>
             </pre>
           </div>
         </div>
 
-        <a href="bab3.html" class="btn primary full">Lanjut ke Bab 3 ➜</a>
+        <a href="bab6.html" class="btn primary full">Lanjut ke Bab 6 ➜</a>
       </section>
     </main>
 
