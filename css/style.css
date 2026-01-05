@@ -63,12 +63,9 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: bold;
 }
 
 .logo-text {
@@ -814,12 +811,9 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: bold;
 }
 
 .footer-logo-text {
