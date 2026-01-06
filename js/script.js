@@ -13,7 +13,7 @@ function toggleCode(id) {
 }
 
 // ===== Validasi Form Kontak =====
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+function handleContactSubmit(e) {
   e.preventDefault(); // cegah reload halaman
 
   const name = document.getElementById("name");
@@ -21,6 +21,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const message = document.getElementById("message");
   const successMsg = document.getElementById("successMessage");
 
+  // Validasi sederhana
   if (name.value.trim() === "" || email.value.trim() === "" || message.value.trim() === "") {
     alert("Semua field wajib diisi!");
     return;
@@ -33,7 +34,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   name.value = "";
   email.value = "";
   message.value = "";
-});
+}
 
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");

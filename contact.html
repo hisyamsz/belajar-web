@@ -67,7 +67,7 @@
           <div class="contact-card">
             <h3>Formulir Kontak</h3>
 
-            <form id="contactForm">
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
               <label for="name">Nama</label>
               <input type="text" id="name" required />
 
@@ -85,10 +85,8 @@
 
           <!-- VIDEO PERKENALAN -->
           <div class="contact-card">
-            <h3>Video Perkenalan Kelompok</h3>
-            <p class="section-desc">
-              Video ini berisi perkenalan anggota kelompok serta pembagian tugas masing-masing mahasiswa.
-            </p>
+            <h3>Perkenalan Kelompok</h3>
+            <p class="section-desc"></p>
 
             <video controls>
               <source src="video/perkenalan-kelompok.mp4" type="video/mp4" />
